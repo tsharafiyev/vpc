@@ -22,25 +22,25 @@ Resources:
       VpcId: !Ref myVPC
       CidrBlock: 10.0.2.0/24   
 
-  ## Route table
-  routeTableName:
-    Type: AWS::EC2::RouteTable
-    Properties:
-      VpcId: !Ref myVPC
+  # ## Route table
+  # routeTableName:
+  #   Type: AWS::EC2::RouteTable
+  #   Properties:
+  #     VpcId: !Ref myVPC
 
-  ## IGW
-  myIgw:
-    Type: AWS::EC2::InternetGateway
-    Properties:
-      Tags:
-        - Key: Name
-          Value: IGW
+  # ## IGW
+  # myIgw:
+  #   Type: AWS::EC2::InternetGateway
+  #   Properties:
+  #     Tags:
+  #       - Key: Name
+  #         Value: IGW
       
-  AttachGateway:
-    Type: AWS::EC2::VPCGatewayAttachment
-    Properties:
-      VpcId: !Ref myVPC
-      InternetGatewayId: !Ref myIgw
+  # AttachGateway:
+  #   Type: AWS::EC2::VPCGatewayAttachment
+  #   Properties:
+  #     VpcId: !Ref myVPC
+  #     InternetGatewayId: !Ref myIgw
       
 
    
