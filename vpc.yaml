@@ -14,13 +14,13 @@ Resources:
       VpcId: !Ref myVPC
       CidrBlock: 10.0.1.0/24
          
-  # ## Public Subnet    
-  # publicSubnet:
-  #   Type: AWS::EC2::Subnet
-  #   Properties:
-  #     AvailabilityZone: us-east-2b
-  #     VpcId: !Ref myVPC
-  #     CidrBlock: 10.0.2.0/24   
+  ## Public Subnet    
+  publicSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: us-east-2b
+      VpcId: !Ref myVPC
+      CidrBlock: 10.0.2.0/24   
 
 
   # ## IGW
