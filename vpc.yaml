@@ -22,15 +22,6 @@ Resources:
       VpcId: !Ref myVPC
       CidrBlock: 10.0.2.0/24   
 
-  # ##IGW
-  # myInternetGateway:
-  #   Type: AWS::EC2::InternetGateway
-  #   Properties:
-  #     Tags:
-  #     - Key: foo
-  #       Value: bar
-
-
   ## IGW
   myIgw:
     Type: AWS::EC2::InternetGateway
@@ -45,6 +36,13 @@ Resources:
       VpcId: !Ref myVPC
       InternetGatewayId: !Ref myIgw
       
-
+  ##Route table
+  PublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref myVPC
+      Tags:
+        - Key: Name
+          Value: Public Route
    
  
