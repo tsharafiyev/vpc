@@ -32,11 +32,14 @@ Resources:
   myIgw:
     Type: AWS::EC2::InternetGateway
     Properties:
+      Tags:
+        - Key: Name
+          Value: IGW
       
   AttachGateway:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
-      VpcId: vpc-id
+      VpcId: !Ref myVPC
       InternetGatewayId: !Ref myIgw
       
 
