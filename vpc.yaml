@@ -44,5 +44,12 @@ Resources:
       Tags:
         - Key: Name
           Value: Public Route
+ ##EC2 instance
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-06fcc1f0bc2c8943f # Amazon Linux AMI in N.Californias
+      KeyName: california-kp
    
  
