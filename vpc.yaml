@@ -49,7 +49,7 @@ Resources:
   Ec2Instance:
     Type: AWS::EC2::Instance
     Properties:
-      VpcId: !myVPC
+      VpcId: !Ref myVPC
       InstanceType: t2.micro
       ImageId: ami-06fcc1f0bc2c8943f # Amazon Linux AMI in N.Californias
       KeyName: california-kp
